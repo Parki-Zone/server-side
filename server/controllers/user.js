@@ -84,7 +84,7 @@
 //             }
 const nodemailer = require('nodemailer');
 const mg  = require('nodemailer-mailgun-transport');
-
+const Cards= require('../database/Card')
 const Users =require('../database/index')
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
