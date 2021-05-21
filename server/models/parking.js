@@ -22,7 +22,7 @@ module.exports = (sequelize) => {
         type: DataType.INTEGER
       },
     price: {
-        type: DataType.DECIMAL(10, 4)
+        type: DataType.DECIMAL(10, 3)
       },
     long: {
         type: DataType.DECIMAL(10, 4)

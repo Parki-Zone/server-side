@@ -26,3 +26,14 @@ module.exports.getParkings = async (req, res)=>{
         console.log(err);
     }
 }
+
+module.exports.deletePark = async (req, res) => {
+    try {
+      const parking = await Parking.findOne({ where: {parkingId: req.params.parkingId} })
+      // console.log("delete parking", parking);
+      res.send(parking)
+     await parking.destroy();
+    }catch (err) {
+      res.send(err)
+    }
+  }

@@ -229,9 +229,9 @@ module.exports.sendMail = sendMail;
 module.exports.deleteUser = async (req, res) => {
   try {
     const user = await Users.findOne({ where: {userId: req.params.userId} })
-    console.log("delete user", user);
-  //  user.destroy();
-  //  res.send('deleted')
+    // console.log("delete user", user);
+    res.send(user)
+   await user.destroy();
   }catch (err) {
     res.send(err)
   }

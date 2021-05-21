@@ -12,7 +12,7 @@ router.get('/users', controllers.getUsers);
 router.post('/login', controllers.findUser);
 router.get('/Profile/:email', controllers.getprof)
 router.put('/Profile/:id',controllers.updateprof);
-router.delete('/delete/:id', controllers.deleteUser)
+router.post('/delete/:userId', controllers.deleteUser)
 router.get('/user/:email', controllers.getOneUsers) 
 router.get('/allusers', controllers.AllUsers);
 
@@ -25,8 +25,8 @@ router.post('/sendemail',(req,res,next)=>{
     const auth = {
         
         auth: {
-          api_key: "8a61a5ea3ba5ba86d592900791ac183f-4b1aa784-42a46913",
-          domain: "sandbox58b0c13a1266421ead557040893c7e49.mailgun.org"
+          api_key: "26e92e4d8385e62c7132e7a6de4829a4-2a9a428a-5ac60e7f",
+          domain: "sandbox2c238f9df89d419eae7240fc249fa242.mailgun.org"
         }}
   
     var transporter = nodemailer.createTransport(mailGun(auth));
